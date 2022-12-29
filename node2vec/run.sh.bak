@@ -1,0 +1,10 @@
+#!/bin/bash
+starttime=$(date +%s)
+
+/data/zsj/python train.py
+python knn_i2i.py
+
+endtime=$(date +%s)
+cost=$((endtime - starttime))
+echo total $cost s
+
